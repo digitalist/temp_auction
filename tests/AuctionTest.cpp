@@ -29,11 +29,7 @@ BOOST_AUTO_TEST_CASE( anyCountryTest )
     //в задании мутное описание параметра "страна", оставлю первый вариант, а не вектор
     auto result = Auction::auction(bannersTestDataset, 4, Auction::MIN_REGION_ID_GUARD);
 
-    for (auto& banner : result){
-        std::cout << banner.id << "\n";
-    }
     BOOST_CHECK(result.size() == 4);
-
 }
 
 BOOST_AUTO_TEST_CASE( noCountryTest )
